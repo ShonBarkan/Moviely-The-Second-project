@@ -102,7 +102,7 @@ class MovieApp  extends Component {
         
      }
      styleSort ={
-        marginTop:'60px',
+        marginTop:'61px',
      }
      styleIntro ={
         marginTop:'100px',
