@@ -5,6 +5,8 @@ import NavBar from './navBar';
 import AddMovie from './addMovie';
 import { Route, Routes } from 'react-router-dom';
 import Sticky from 'react-sticky-el';
+import { Link } from "react-router-dom";
+
 
 
 class MovieApp  extends Component {
@@ -134,7 +136,7 @@ class MovieApp  extends Component {
                             <Routes>
                                 <Route path="/AddMovie" element ={ <AddMovie originalMovies={this.state.originalMovies} addNewMovie={(event,formik,newId)=>this.addNewMovie(event,formik,newId)}/> } />
                                 <Route path="/HomePage" element ={ <HomePage genreWeAre={this.state.genreWeAre}movies={this.state.movies}originalMovies={this.state.originalMovies}pageButton={this.state.pageButton} deletMovie={(id,name)=>this.deletMovie(id,name)} isLike={(id,name)=>this.isLike(id,name)} moveToPage={(num)=>this.moveToPage(num)}/> }/>
-                                <Route path="/" element ={<div style={this.styleIntro}><h1 className='text-warning text-center'>Wellcom to Moviely</h1><h1 className='text-warning text-center'> To start press on <span className='text-primary'>Home page</span></h1></div>}/>
+                                <Route path="/" element ={<div style={this.styleIntro}><h1 className='text-warning text-center'>Wellcom to Moviely</h1><h1 className='text-warning text-center'> To start press on <span className='text-primary'><Link to="/HomePage" onClick={()=>this.allMovies()}>Home Page</Link></span></h1></div>}/>
                             </Routes>  
                         </div>
 

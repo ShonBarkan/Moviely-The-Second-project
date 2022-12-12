@@ -32,7 +32,7 @@ const Movie = (props) => {
 
                     <th style={styleTh1}>
                         {like===true?
-                        <button style={styleBtn} onClick={()=>isLike(movieId)}>&#129505;</button>
+                        <button style={styleBtn} onClick={()=>isLike(movieId,movieName)}>&#129505;</button>
                         :
                         <i className="fa-regular fa-heart" onClick={()=>isLike(movieId,movieName)}></i>
                         }
